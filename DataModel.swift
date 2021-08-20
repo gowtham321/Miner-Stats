@@ -7,12 +7,14 @@
 
 import Foundation
 
+let address = Address()
+
 protocol DataModelDelegate {
     func doUpdateView(_ dataModel: DataModel, finalData: ApiData)
 }
 
 struct DataModel {
-    let url = "https://api-ravencoin.flypool.org/miner/RM2MR746UHwgJWuPo3vjMiwgJkR9DFaZUD/dashboard"
+    let url = "https://api-ravencoin.flypool.org/miner/\(address.a)/dashboard"
     
     var delegate: DataModelDelegate?
     
